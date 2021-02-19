@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet" >
+    <link rel="stylesheet" href="css/custom.css">
+
+    <title>js_basic</title>
+  </head>
+  <body>
+
+    <section class="js_basic">
+      <div class="container">
+           <h1><em>our js-basic class :)</em> </h1>
+           <span></span>
+
+           <div class="topic">
+             <h2>what we would learn?</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Beatae cupiditate, eum atque ipsam vel quisquam nemo molestias, 
+                      provident in error fugit fugiat consequatur dolor ducimus.
+                      Et sit ratione sapiente nostrum.</p>
+           </div>
+
+          <!-- *********  self-info *************** -->
+          <div class="self-info">
+               <h1>click below to see </h1>
+               <span></span>
+
+            <p id="info"></p>
+            <button type="button" onclick="information()">check_info</button>
+          </div>
+
+          <!-- ************* calculator ************* -->
+
+        <div class="calculator">
+          <h1>calculate your equation here </h1>
+          <span></span>
+
+          <input type="text" id="display">
+
+          <button type="button" onclick="one()"> 1</button>
+           <button type="button" onclick="two()"> 2</button>
+           <button type="button" onclick="three()"> 3</button>
+           <button type="button" onclick="four()"> 4</button>
+           <button type="button" onclick="five()"> 5</button>
+           <button type="button" onclick="six()"> 6</button>
+           <button type="button" onclick="seven()"> 7</button>
+           <button type="button" onclick="eight()"> 8</button>
+           <button type="button" onclick="nine()"> 9</button>
+           <button type="button" onclick="zero()"> 0</button>
+           <button type="button" onclick="add()"> + </button>
+           <button type="button" onclick="sub()">-</button>
+           <button type="button" onclick="divi()">/</button>
+           <button type="button" onclick="mult()">*</button>
+           <button type="button" onclick="equal()">=</button>
+           <button type="button" onclick="clr()">c</button>
+        
+        </div>
+
+         <!-- **************** your-result ******************** -->
+        <div class="showing_result">
+
+          <h1>see your result here </h1>
+          <span></span>
+
+
+             <input type="number" id="marks">
+             <button type="button" onclick="result()"> your result  </button>
+             <h2 id="result"></h2>
+        </div>
+
+
+        <!-- ***************** multiplication ********************** -->
+         <div class="learn-multiplication">
+           
+          <h1>multiply here what number you want </h1>
+          <span></span>
+
+
+              <input type="text" id="value">
+              <button type="button" onclick="learn()">learn</button>
+              <p id="show_here"></p>
+         </div>
+
+
+         <!-- ***********************todays-date************************* -->
+         <div class="todays_date">
+
+          <h1> see every second here </h1>
+          <span></span>
+
+
+              <button type="button" onclick="learndate()">todays_date</button>
+              <p id="show_second"></p>
+         </div>
+
+         <!-- ********************* lets-find-even-odd ************************ -->
+
+         <div class="odd-even">
+              
+          <h1>check odd-even of any number here </h1>
+          <span></span>
+
+
+              <input type="number" id="write_here">
+              <button type="button" onclick="oddeven()">check_here</button>
+              <p id="display_here"></p>
+         </div>
+
+      </div>
+    </section>
+
+    <script>
+
+     // ****************** self-info-js   **********************
+     
+      var _name = "farjana akhter"  
+      var _profession = "student"
+      var _subject ="cse"
+      var _skills = " web design, email template design,socoal media marketing, seo, data entry,"
+      var _hobby ="singing ,travelling,reading"
+      var _phone = " 016********** "
+      var _email = "farjana*********@gmail.com"   
+      var detail = "<strong>" + "Name :" + "</strong>" + _name +"<br>"+ "<strong>" + "profession :" + "</strong>"+ _profession +"<br>" +
+      "<strong>" + "subject :" + "</strong>"+ _subject +"<br>" + "<strong>" + "skills :" + "</strong>"+ _skills +"<br>" +
+      "<strong>" + "hobby :" + "</strong>"+ _hobby +"<br>" + "<strong>" + "phone :" + "</strong>"+ _phone +"<br>" +
+      "<strong>" + "email :" + "</strong>"+ _email
+
+
+       function information(){
+         document.getElementById("info").innerHTML = detail;
+       }
+
+        
+
+     //   *******************    calculator-js    ********************
+
+      var show= document.getElementById("display");
+
+    function one(){
+          show.value += 1;
+    }
+    function two(){
+         show.value += 2;
+    }
+    function three(){
+         show.value += 3;
+    }
+    function four(){
+         show.value += 4;
+    }
+    function five(){
+         show.value += 5;
+    }
+    function six(){
+         show.value += 6;
+    }
+    function seven(){
+         show.value += 7;
+    }
+    function eight(){
+         show.value += 8;
+    }
+    function nine(){
+         show.value += 9;
+    }
+    function zero(){
+         show.value += 0;
+    }
+    function add(){
+         show.value += "+";
+    }
+    function sub(){
+         show.value += "-";
+    }
+    function divi(){
+         show.value += "/";
+    }
+    function mult(){
+         show.value += "*";
+    }
+    function equal(){
+         show.value = eval(show.value);
+    }
+    function clr(){
+         show.value = "";
+    }
+    
+    
+
+//     ***************** your-result-js ***********************
+    
+   function result(){
+     var number = document.getElementById("marks").value ;
+
+
+     if(number > 100){
+          document.getElementById("result").innerHTML="invalid number";
+     }
+     else if(number >= 80){
+          document.getElementById("result").innerHTML="you got A+";
+     }
+     else if(number >= 70){
+          document.getElementById("result").innerHTML="you got A";
+     }
+     else if(number >= 60){
+          document.getElementById("result").innerHTML="you got A-";
+     }
+     else if(number >= 50){
+          document.getElementById("result").innerHTML="you got B";
+     }
+     else if(number >= 40){
+          document.getElementById("result").innerHTML="you got C";
+     }
+     else if(number >= 33){
+          document.getElementById("result").innerHTML="you got D";
+     }
+     else{
+          document.getElementById("result").innerHTML="you fail"
+     }
+
+    } 
+
+
+
+//     ****************** learn-multiplication-js *******************
+      
+  function learn(){
+     var a = 10;
+      var b = document.getElementById("value").value;
+      var i = 1;
+      var c = null;
+
+      for(i ; a>=i ;i++){
+           c = c + i + "x" + b + "=" + i*b + "<br>";
+           document.getElementById("show_here").innerHTML=c; 
+      }
+  }
+
+
+
+
+//   *********************** show_date_js *************************
+     function learndate(){
+          var date = new Date();
+          var second = date.getSeconds();
+          document.getElementById("show_second").innerHTML= second;
+
+          setInterval(
+          function(){
+               learndate()
+          },1000
+     )
+     }
+   
+
+// **************************** odd-even *************************************
+     function oddeven(){
+          var a =document.getElementById("write_here").value;
+          if(a%2==0){
+               document.getElementById("display_here").innerHTML="it is a even number"
+          }
+          else{
+               document.getElementById("display_here").innerHTML="it is a odd number"
+          }
+     }
+
+    </script>
+
+  </body>
+</html>
